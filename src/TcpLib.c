@@ -90,6 +90,7 @@ int ServerWork(int fd, char ip_addr[])
         return (-1);
     }
 
+    // map ip address to username in shared memory
     memcpy(ip_addr, inet_ntoa(cli.sin_addr), sizeof(inet_ntoa(cli.sin_addr))+1);
     return new_fd;
 }
@@ -125,6 +126,7 @@ void Chatting(int fd)
 
     while(1)
     {
+        // login user
         memset(reply, 0, BUFSIZE);
         memset(username, 0, BUFSIZE);
 
@@ -157,6 +159,7 @@ void Chatting(int fd)
     // scanf("%*[^\n]");
     // scanf("%*c");
 
+    // shared memory
     int prot = PROT_READ | PROT_WRITE;
     int flags = MAP_SHARED | MAP_ANONYMOUS;
     static char* send = NULL;
@@ -167,6 +170,7 @@ void Chatting(int fd)
     {
         memset(reply, 0, BUFSIZE);
 
+        // conditional forking skill
         if(cpid) cpid = fork();
         else cpid = 1;
 
@@ -176,6 +180,7 @@ void Chatting(int fd)
                     memset(send, 0, BUFSIZE);
                     for (int i = 0; i < BUFSIZE; i++)
                     {
+                        // scanf command
                         if ((ch = getc(stdin)) != EOF)
                         {
                             if (ch == 10)
@@ -192,6 +197,7 @@ void Chatting(int fd)
                 write(fd, send, BUFSIZE);
                 exit(1);
             default:
+                // non-blocking wait
                 cpid = waitpid(-1, NULL, WNOHANG);
                 while(1)
                 {
@@ -225,6 +231,7 @@ int RelayCLI(int fd, UserNode* shared_list, char ip_addr[])
 
         read(fd, username, BUFSIZE);
 
+        // record username location in shared memory
         index = online(fd, shared_list, username, ip_addr);
         if (index != -1)
         {
@@ -272,6 +279,7 @@ int RelayCLI(int fd, UserNode* shared_list, char ip_addr[])
                     break;
                 }
 
+                // extract user from unicast message
                 char* pch = strstr(receive, "\\>");
                 if (pch != NULL)
                 {
@@ -304,6 +312,7 @@ int RelayCLI(int fd, UserNode* shared_list, char ip_addr[])
             default:
                 sleep(1);
                 cpid = waitpid(-1, NULL, WNOHANG);
+                // unify all information by signal all clients print out buffer
                 synch(fd, shared_list, index);
                 break;
             case -1:

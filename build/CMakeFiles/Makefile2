@@ -77,8 +77,8 @@ clean: CMakeFiles/TCPLIB.dir/clean
 # Target rules for target CMakeFiles/server.dir
 
 # All Build rule for target.
-CMakeFiles/server.dir/all: CMakeFiles/TCPLIB.dir/all
 CMakeFiles/server.dir/all: CMakeFiles/OTHERUTIL.dir/all
+CMakeFiles/server.dir/all: CMakeFiles/TCPLIB.dir/all
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/paulpeng/Desktop/netprog/online_chatting/build/CMakeFiles --progress-num=7,8 "Built target server"
@@ -105,8 +105,8 @@ CMakeFiles/server.dir/clean:
 # Target rules for target CMakeFiles/client.dir
 
 # All Build rule for target.
-CMakeFiles/client.dir/all: CMakeFiles/TCPLIB.dir/all
 CMakeFiles/client.dir/all: CMakeFiles/OTHERUTIL.dir/all
+CMakeFiles/client.dir/all: CMakeFiles/TCPLIB.dir/all
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/depend
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/paulpeng/Desktop/netprog/online_chatting/build/CMakeFiles --progress-num=5,6 "Built target client"
