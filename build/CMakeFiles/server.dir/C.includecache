@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/OtherUtil.h
+
+../include/TcpLib.h
+OtherUtil.h
+-
+
+/mnt/c/Users/paulpeng/Desktop/netprog/online_chatting/src/Server.c
+TcpLib.h
+-
+

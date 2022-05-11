@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/client.dir/src/Client.c.o  -o client  libTCPLIB.a libOTHERUTIL.a 

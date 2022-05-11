@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/server.dir/src/Server.c.o  -o server  libTCPLIB.a libOTHERUTIL.a 
