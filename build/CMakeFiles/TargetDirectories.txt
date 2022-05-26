@@ -1,6 +1,0 @@
-/mnt/c/Users/paulpeng/Desktop/netprog/online_chatting/build/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/paulpeng/Desktop/netprog/online_chatting/build/CMakeFiles/server.dir
-/mnt/c/Users/paulpeng/Desktop/netprog/online_chatting/build/CMakeFiles/client.dir
-/mnt/c/Users/paulpeng/Desktop/netprog/online_chatting/build/CMakeFiles/OTHERUTIL.dir
-/mnt/c/Users/paulpeng/Desktop/netprog/online_chatting/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/paulpeng/Desktop/netprog/online_chatting/build/CMakeFiles/TCPLIB.dir

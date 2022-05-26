@@ -1,2 +1,0 @@
-/usr/bin/ar qc libOTHERUTIL.a  CMakeFiles/OTHERUTIL.dir/src/OtherUtil.c.o
-/usr/bin/ranlib libOTHERUTIL.a

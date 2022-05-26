@@ -1,2 +1,0 @@
-/usr/bin/ar qc libTCPLIB.a  CMakeFiles/TCPLIB.dir/src/TcpLib.c.o
-/usr/bin/ranlib libTCPLIB.a
