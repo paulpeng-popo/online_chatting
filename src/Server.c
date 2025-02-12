@@ -1,10 +1,9 @@
-#include <TcpLib.h>
+#include <tcplib.h>
 
 int main(int argc, char *argv[])
 {
-    int port = handleArgs("SERVER", argc, argv);
-    int srv_fd = ServerInit(port);
-    MultiProc(srv_fd);
+    int fd = initServer();
+    clientAcception(fd);
 
     return 0;
 }
